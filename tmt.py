@@ -77,15 +77,14 @@ def main():
         icon=ICON.DEFAULT
     )
 
-    if target == 'en':
-        wf.add_item(
-            title=result,
-            subtitle=u"回车听发音",
-            valid=True,
-            arg="~"+result,
-            icon=ICON.SOUND,
-            copytext=result
-        )
+    title = result if target == 'en' else text
+    wf.add_item(
+        title=title,
+        subtitle=u"回车听发音",
+        valid=True,
+        arg="~"+title,
+        icon=ICON.SOUND,
+    )
 
     wf.send_feedback()
 
