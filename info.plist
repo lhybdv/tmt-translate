@@ -19,6 +19,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>5FFC12A2-1DFF-4561-8855-6275B2DFD4BC</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>ADF002A7-73CA-4C36-8F77-DDE981E6B18F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>912D65D2-3DE6-44DE-B209-D48A00323586</key>
 		<array>
 			<dict>
@@ -111,8 +124,6 @@
 				<integer>0</integer>
 				<key>escaping</key>
 				<integer>68</integer>
-				<key>keyword</key>
-				<string>t</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -167,15 +178,51 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>unstackview</key>
+				<key>alfredfiltersresults</key>
 				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>t</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>别着急哈</string>
+				<key>script</key>
+				<string>python3 start.py "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>请输入要翻译的内容，回车确认查询</string>
+				<key>title</key>
+				<string>腾讯翻译</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.utility.hidealfred</string>
+			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>83E6A40A-934B-48EA-A335-D176E25E5CB7</string>
+			<string>5FFC12A2-1DFF-4561-8855-6275B2DFD4BC</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -212,6 +259,19 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>unstackview</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.hidealfred</string>
+			<key>uid</key>
+			<string>83E6A40A-934B-48EA-A335-D176E25E5CB7</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -233,23 +293,6 @@ echo -n "$query" | say $1 -v Samantha</string>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>B30E5F60-5B5E-440F-B5CE-10A287CFF4A4</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>matchmode</key>
-				<integer>0</integer>
-				<key>matchstring</key>
-				<string>~</string>
-				<key>replacestring</key>
-				<string></string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.replace</string>
-			<key>uid</key>
-			<string>CBE52033-CEAE-4E91-ACD5-161F6F6FBCA7</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -285,6 +328,23 @@ echo -n "$query" | say $1 -v Samantha</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>~</string>
+				<key>replacestring</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.replace</string>
+			<key>uid</key>
+			<string>CBE52033-CEAE-4E91-ACD5-161F6F6FBCA7</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -293,51 +353,58 @@ echo -n "$query" | say $1 -v Samantha</string>
 		<key>3E998AD7-3D04-4623-B911-C163A44D45AE</key>
 		<dict>
 			<key>xpos</key>
-			<real>410</real>
+			<real>600</real>
 			<key>ypos</key>
-			<real>155</real>
+			<real>150</real>
 		</dict>
-		<key>83E6A40A-934B-48EA-A335-D176E25E5CB7</key>
-		<dict>
-			<key>xpos</key>
-			<real>570</real>
-			<key>ypos</key>
-			<real>185</real>
-		</dict>
-		<key>912D65D2-3DE6-44DE-B209-D48A00323586</key>
-		<dict>
-			<key>xpos</key>
-			<real>205</real>
-			<key>ypos</key>
-			<real>450</real>
-		</dict>
-		<key>ADF002A7-73CA-4C36-8F77-DDE981E6B18F</key>
+		<key>5FFC12A2-1DFF-4561-8855-6275B2DFD4BC</key>
 		<dict>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>155</real>
+			<real>150</real>
+		</dict>
+		<key>83E6A40A-934B-48EA-A335-D176E25E5CB7</key>
+		<dict>
+			<key>xpos</key>
+			<real>815</real>
+			<key>ypos</key>
+			<real>180</real>
+		</dict>
+		<key>912D65D2-3DE6-44DE-B209-D48A00323586</key>
+		<dict>
+			<key>xpos</key>
+			<real>395</real>
+			<key>ypos</key>
+			<real>445</real>
+		</dict>
+		<key>ADF002A7-73CA-4C36-8F77-DDE981E6B18F</key>
+		<dict>
+			<key>xpos</key>
+			<real>220</real>
+			<key>ypos</key>
+			<real>150</real>
 		</dict>
 		<key>B30E5F60-5B5E-440F-B5CE-10A287CFF4A4</key>
 		<dict>
 			<key>xpos</key>
-			<real>410</real>
+			<real>600</real>
 			<key>ypos</key>
-			<real>420</real>
+			<real>415</real>
 		</dict>
 		<key>BC555E7F-61A6-462C-AD11-2B1276D376EE</key>
 		<dict>
 			<key>xpos</key>
-			<real>265</real>
+			<real>460</real>
 			<key>ypos</key>
-			<real>185</real>
+			<real>180</real>
 		</dict>
 		<key>CBE52033-CEAE-4E91-ACD5-161F6F6FBCA7</key>
 		<dict>
 			<key>xpos</key>
-			<real>290</real>
+			<real>480</real>
 			<key>ypos</key>
-			<real>450</real>
+			<real>445</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
