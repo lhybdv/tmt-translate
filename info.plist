@@ -6,6 +6,19 @@
 	<string>com.tmt.translate</string>
 	<key>connections</key>
 	<dict>
+		<key>3E998AD7-3D04-4623-B911-C163A44D45AE</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>83E6A40A-934B-48EA-A335-D176E25E5CB7</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>912D65D2-3DE6-44DE-B209-D48A00323586</key>
 		<array>
 			<dict>
@@ -154,6 +167,19 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>unstackview</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.hidealfred</string>
+			<key>uid</key>
+			<string>83E6A40A-934B-48EA-A335-D176E25E5CB7</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>conditions</key>
 				<array>
 					<dict>
@@ -271,6 +297,13 @@ echo -n "$query" | say $1 -v Samantha</string>
 			<key>ypos</key>
 			<real>155</real>
 		</dict>
+		<key>83E6A40A-934B-48EA-A335-D176E25E5CB7</key>
+		<dict>
+			<key>xpos</key>
+			<real>570</real>
+			<key>ypos</key>
+			<real>185</real>
+		</dict>
 		<key>912D65D2-3DE6-44DE-B209-D48A00323586</key>
 		<dict>
 			<key>xpos</key>
@@ -327,3 +360,4 @@ echo -n "$query" | say $1 -v Samantha</string>
 	<string></string>
 </dict>
 </plist>
+
