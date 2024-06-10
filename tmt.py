@@ -36,11 +36,11 @@ def create_tmt_client():
     return client
 
 
-def translate_text(client, text, target) -> str:
+def translate_text(client, text, source, target) -> str:
     req = models.TextTranslateRequest()
     params = {
         "SourceText": text,
-        "Source": "auto",
+        "Source": source,
         "Target": target,
         "ProjectId": 0
     }
@@ -50,7 +50,7 @@ def translate_text(client, text, target) -> str:
     return resp.TargetText
 
 def is_chinese(text):
-    return len(re.findall(r'[\u4e00-\u9fff]+', text)) == 0
+    return len(re.findall(r'[\u4e00-\u9fff]+', text)) > 0
 
 
 def main():
@@ -59,8 +59,9 @@ def main():
     try:
         client = create_tmt_client()
 
-        target = 'zh' if is_chinese(text) else 'en'
-        result = translate_text(client, text, target)
+        source = 'zh' if is_chinese(text) else 'en'
+        target = 'en' if is_chinese(text) else 'zh'
+        result = translate_text(client, text, source, target)
     except Exception as err:
         result = err
         target = 'unknown'
@@ -89,3 +90,4 @@ def main():
 
 if __name__ == u"__main__":
     main()
+
