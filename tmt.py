@@ -59,7 +59,6 @@ def main():
     try:
         client = create_tmt_client()
 
-        # text = text.decode('utf8')
         target = 'zh' if is_chinese(text) else 'en'
         result = translate_text(client, text, target)
     except Exception as err:
@@ -90,4 +89,3 @@ def main():
 
 if __name__ == u"__main__":
     main()
-
